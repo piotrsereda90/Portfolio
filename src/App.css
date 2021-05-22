@@ -8,5 +8,20 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: grey;
+}
+
+
+.tsparticles-canvas-el {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+@media(max-width: 768px) {
+  .canvas {
+    display: none;
+  }
 }
