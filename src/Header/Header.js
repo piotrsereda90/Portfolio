@@ -68,7 +68,7 @@ const Header = () => {
             loop
             >
           </Typed>
-          <a href="">contact me</a>
+          <a className='header-button' href="">contact me</a>
         </Info>
       </Wrapper>
     </header>
