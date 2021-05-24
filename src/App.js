@@ -1,7 +1,8 @@
 import './App.css';
+import Particles from 'react-particles-js';
 import NavBar from './NavBar';
 import Header from './Header';
-import Particles from 'react-particles-js';
+import AboutMe from './AboutMe';
 
 function App() {
   return (
@@ -28,9 +29,8 @@ function App() {
       }} />
       <NavBar/>
       <Header/>
+      <AboutMe/>
     </>
   );
 }
-
-// <a href='https://pl.freepik.com/zdjecia/technologia'>Technologia zdjęcie utworzone przez rawpixel.com - pl.freepik.com</a> przypis do tła w hederze
 export default App;
