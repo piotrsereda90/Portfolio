@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Header from './Header';
 import AboutMe from './AboutMe';
 import Experience from './Experience';
+import Portfolio from './Portfolio';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
       <Header/>
       <AboutMe/>
       <Experience/>
+      <Portfolio/>
     </>
   );
 }

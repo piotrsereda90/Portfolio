@@ -7,6 +7,7 @@ display:flex;
 flex-direction:column;
 margin-top: 50px;
 background-color:#f4f4f4;
+overflow:hidden;
 
 h1{
   text-align:center;
@@ -95,10 +96,6 @@ padding: 10px 30px;
   @media(max-width: 768px){
    left:0;
   }
-  // @media(max-width: 480px){
-  //   left:0;
-  //   top:0
-  //  }
 }
 h3{
   color:#ef4035;
