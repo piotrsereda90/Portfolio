@@ -9,8 +9,10 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "emailjs-com": "^2.6.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.6.7",
     "react-particles-js": "^3.4.1",
     "react-popupbox": "^2.0.8",
     "react-scripts": "4.0.3",
@@ -41,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "optimize-css-assets-webpack-plugin": "^6.0.0"
   }
 }
