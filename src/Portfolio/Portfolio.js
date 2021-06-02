@@ -119,13 +119,13 @@ const Portfolio = () => {
   const popupboxConfigStore = {
     titleBar:{
       enable:true,
-      text: 'Store Giwera Project',
+      text: 'Store Project React-Redux',
     },
     fadeIn: true,
     fadeInSpeed: 500,
   }
   return (
-    <section>
+    <section id='portfolio'>
       <Wrapper>
         <Container>
           <H1>

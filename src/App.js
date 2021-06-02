@@ -6,6 +6,7 @@ import AboutMe from './AboutMe';
 import Experience from './Experience';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Experience/>
       <Portfolio/>
       <Contact/>
+      <Footer/>
     </>
   );
 }

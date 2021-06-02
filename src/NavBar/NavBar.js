@@ -6,10 +6,10 @@ import logo from '../assets/logo.jpg';
 
 const Nav = styled.nav`
 display:flex;
-position:absolute;
+position:fixed;
 top:0;
 width:0;
-z-index:2;
+z-index:4;
 width: 100%;
 height: 15vh;
 padding-left:150px;
@@ -33,11 +33,18 @@ ul{
 li{
   color:#9C9FA5;
   font-size: 21px;
+  padding-top:5px;
   border-top: 2px solid #353943;
   text-transform:uppercase;
+  transition: .3s;
   :hover{
     cursor:pointer;
-    border-top: 2px solid yellow;
+    border-top: 2px solid #FAA90B;
+  }
+  a:focus{
+    padding-top:5px;
+    border-top: 2px solid #FAA90B;;
+  }
   }
 }
 @media (max-width: 1240px){
@@ -53,12 +60,14 @@ li{
 const NavBar = () => {
 
   return (
-    <Nav>
-      <div className='logo'>
-        <img src={logo} alt="logo" />
-      </div>
-      <Burger/>
-    </Nav>
+    <section id='navBar'>
+      <Nav>
+        <div className='logo'>
+          <img src={logo} alt="logo" />
+        </div>
+        <Burger/>
+      </Nav>
+    </section>
    );
 }
 export default NavBar;

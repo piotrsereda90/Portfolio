@@ -105,7 +105,7 @@ h3{
 
 const Experience = () => {
   return (
-    <section>
+    <section id='experience'>
       <Wrapper>
         <h1>experience</h1>
         <TimeLineWrapperRight>

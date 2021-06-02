@@ -141,7 +141,7 @@ const Contact = () => {
   const[successMessage, setSuccessMessage] = useState('')
 
   const {register, handleSubmit,formState:{errors}} = useForm();
-  
+
   const serviceId = 'service_ID';
   const templateId = 'template_ID';
   const userId ='user_L1InkAhmSJQRY1yHaYyg6';
@@ -171,91 +171,93 @@ const Contact = () => {
   }
 
   return (
-    <Wrapper>
-      <Title>
-        <h1>Contact Me</h1>
-        <p>Please fill out the form and describe you need. I'll contact you as soon as possible.</p>
-      </Title>
-      <MessageSuccess>{successMessage}</MessageSuccess>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <LeftSection>
-          <input type='text'
-          placeholder='Name'
-          name='name'
-            {...register('name',{
-              required: 'Please enter your name',
+    <section id='contactMe'>
+      <Wrapper>
+        <Title>
+          <h1>Contact Me</h1>
+          <p>Please fill out the form and describe you need. I'll contact you as soon as possible.</p>
+        </Title>
+        <MessageSuccess>{successMessage}</MessageSuccess>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <LeftSection>
+            <input type='text'
+            placeholder='Name'
+            name='name'
+              {...register('name',{
+                required: 'Please enter your name',
+                maxLength:{
+                  value: 20,
+                  message: 'Please enter a name with fewer than 20 characters'
+                }
+              })
+            }
+            />
+            <div><span>{errors.name&&errors.name.message}</span></div>
+            <input type='text'
+            placeholder='Phone'
+            name='phone'
+            {...register('phone',{
+              required: 'Please enter your phone',
+              maxLength:{
+                value: 20,
+                message: 'Please enter a phone with fewer than 20 characters'
+              }
+            })
+          }
+            />
+            <div><span>{errors.phone&&errors.phone.message}</span></div>
+            <input type='text'
+            placeholder='Email'
+            name='email'
+            {...register('email',{
+              required: 'Please enter your email',
+                pattern:{
+                value: regex,
+                message: 'Invalid email adress'
+                },
+              maxLength:{
+                value: 20,
+                message: 'Please enter a email with fewer than 20 characters'
+              }
+            })
+          }
+            />
+            <div><span>{errors.email&&errors.email.message}</span></div>
+            <input type='text'
+            placeholder='Subject'
+            name='subject'
+            {...register('subject',{
+              required: 'OOPS, you forget to add the subject',
+              maxLength:{
+                value: 20,
+                message: 'Please enter a email with fewer than 20 characters'
+              }
+            })
+          }
+            />
+            <div><span>{errors.subject&&errors.subject.message}</span></div>
+          </LeftSection>
+          <RightSection>
+            <textarea type='text'
+            placeholder='Please put your question here'
+            name='description'
+            {...register('description',{
+              required: 'Please describe shortly what you needs...',
               maxLength:{
                 value: 20,
                 message: 'Please enter a name with fewer than 20 characters'
               }
             })
           }
-          />
-          <div><span>{errors.name&&errors.name.message}</span></div>
-          <input type='text'
-          placeholder='Phone'
-          name='phone'
-          {...register('phone',{
-            required: 'Please enter your phone',
-            maxLength:{
-              value: 20,
-              message: 'Please enter a phone with fewer than 20 characters'
-            }
-          })
-        }
-          />
-          <div><span>{errors.phone&&errors.phone.message}</span></div>
-          <input type='text'
-          placeholder='Email'
-          name='email'
-          {...register('email',{
-            required: 'Please enter your email',
-              pattern:{
-              value: regex,
-              message: 'Invalid email adress'
-              },
-            maxLength:{
-              value: 20,
-              message: 'Please enter a email with fewer than 20 characters'
-            }
-          })
-        }
-          />
-          <div><span>{errors.email&&errors.email.message}</span></div>
-          <input type='text'
-          placeholder='Subject'
-          name='subject'
-          {...register('subject',{
-            required: 'OOPS, you forget to add the subject',
-            maxLength:{
-              value: 20,
-              message: 'Please enter a email with fewer than 20 characters'
-            }
-          })
-        }
-          />
-          <div><span>{errors.subject&&errors.subject.message}</span></div>
-        </LeftSection>
-        <RightSection>
-          <textarea type='text'
-          placeholder='Please put your question here'
-          name='description'
-          {...register('description',{
-            required: 'Please describe shortly what you needs...',
-            maxLength:{
-              value: 20,
-              message: 'Please enter a name with fewer than 20 characters'
-            }
-          })
-        }
-          ></textarea>
-          <div><span>{errors.description&&errors.description.message}</span></div>
-        </RightSection>
-        <BtnWrapper>
-          <button type='submit'>Contact Me</button>
-        </BtnWrapper>
-      </Form>
-    </Wrapper>
+            ></textarea>
+            <div><span>{errors.description&&errors.description.message}</span></div>
+          </RightSection>
+          <BtnWrapper>
+            <button type='submit'>Contact Me</button>
+          </BtnWrapper>
+        </Form>
+      </Wrapper>
+    </section>
    );
 }
 export default Contact;

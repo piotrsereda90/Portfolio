@@ -48,7 +48,7 @@ margin-bottom: 10px;
 
 const AboutMe = () => {
   return (
-    <section>
+    <section id='aboutMe'>
       <Wrapper>
         <ImgContainer>
           <img src={author} alt="" />
