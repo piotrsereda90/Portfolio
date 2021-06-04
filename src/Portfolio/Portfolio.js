@@ -13,9 +13,7 @@ margin-top: 20px;
 `
 const Container = styled.div`
 display:flex;
-// flex-direction:column;
-flex-direction:row;
-flex-wrap:wrap;
+flex-direction:column;
 justify-content: space-around;
 width: 100%;
 `
@@ -52,7 +50,7 @@ img{
   padding: 5px;
   border: 2px solid #f9ab00;
   @media(max-width: 768px){
-    width: 80%;
+    width: 70%;
     height: 80%;
   }
 }
@@ -78,8 +76,6 @@ transform:translate(-50%, -50%);
 font-size: 24px;
 opacity:0;
 transition: .4s;
-
-
 `
 const PopupWrapper = styled.div`
 img{
@@ -105,6 +101,14 @@ a {
   &:hover{
     color:#ef4035;
   }
+}
+`
+const ImagesWrapper  =styled.div`
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+@media(max-width: 823px){
+  flex-direction:column
 }
 
 `
@@ -168,18 +172,20 @@ const Portfolio = () => {
           <H1>
             <h1>Portfolio</h1>
           </H1>
-          <ImgWrapper>
-            <ImgContainer onClick={OpenPopupStore}>
-              <FontSearch><FontAwesomeIcon icon={faSearchPlus}/></FontSearch>
-              <img src={store} alt="store" />
-            </ImgContainer>
-          </ImgWrapper>
-          <ImgWrapper>
-            <ImgContainer onClick={OpenPopupCertificate}>
-              <FontSearch><FontAwesomeIcon icon={faSearchPlus}/></FontSearch>
-              <img src={certificate} alt='certificate' />
-            </ImgContainer>
-          </ImgWrapper>
+          <ImagesWrapper>
+            <ImgWrapper>
+              <ImgContainer onClick={OpenPopupStore}>
+                <FontSearch><FontAwesomeIcon icon={faSearchPlus}/></FontSearch>
+                <img src={store} alt="store" />
+              </ImgContainer>
+            </ImgWrapper>
+            <ImgWrapper>
+              <ImgContainer onClick={OpenPopupCertificate}>
+                <FontSearch><FontAwesomeIcon icon={faSearchPlus}/></FontSearch>
+                <img src={certificate} alt='certificate' />
+              </ImgContainer>
+            </ImgWrapper>
+          </ImagesWrapper>
         </Container>
       </Wrapper>
       <PopupboxContainer {...popupboxConfigStore}/>

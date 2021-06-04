@@ -8,6 +8,7 @@ display:flex;
 padding-top: 50px;
 @media(max-width: 768px){
   flex-direction: column;
+  align-items:center;
 }
 
 `
@@ -15,9 +16,10 @@ const ImgContainer = styled.div`
 width: 50%;
 text-align:center;
 @media(max-width: 768px){
-  width: 100%;
+  width: 60%;
 }
 img{
+  width: 30%;
   padding:5px;
   border-radius: 50%;
   border: 3px solid #FAA90B;
@@ -29,22 +31,28 @@ img{
 `
 const Description = styled.div`
 width: 50%;
-padding:10px 30px;
+padding-top:10px;
+padding-bottom:10px;
+padding-left:30px;
+padding-right:300px;
+p{
+  letter-spacing: 1px;
+}
+
+
 @media(max-width: 768px){
   width: 100%;
+  padding:10px 30px;
 }
 h2{
 width: 100%;
 color:#FAA90B;
 text-transform:uppercase;
-margin-bottom: 10px;
+margin-bottom: 20px;
 @media(max-width: 768px){
   text-align:center;
   margin-bottom: 30px;
-}
-
-}
-`
+}}`
 
 const AboutMe = () => {
   return (
@@ -55,7 +63,9 @@ const AboutMe = () => {
         </ImgContainer>
         <Description>
           <h2>about me</h2>
-          <p>Hello! I am Piotr Sereda. I have been developing websites for half years. I'm a Front-End Web Developer. I love programming and love to learn something new. The technologies I use are  ReactJS. My passion is still improve me skills as web developer.</p>
+          <p>
+            Hello! I am Piotr Sereda and I live in Magdeburg.I graduated in management and economics. I interested in IT and programming.  At first, I treated it as fun. It gave me a lot of pleasure. I started doing different online courses. I focused on getting to know the frontend programming languages well. Now I'm a Front-End Web Developer. I have been developing commercial websites for ten months. I love programming and love to learn something new. The technologies I use are JavaScript and ReactJS. My passion is still improve me skills as web developer.
+          </p>
         </Description>
       </Wrapper>
     </section>

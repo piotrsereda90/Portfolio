@@ -75,8 +75,8 @@ const Footer = () => {
         <Link  smooth={true} to='contactMe' offset={-90} href='#'>Contacts</Link>
         </Nav>
         <MyData>
-          <a href="#">+48501229627</a>
-          <a href="#">+4915166093511</a>
+          <a href='tel:+48501229627'>+48501229627</a>
+          <a href='tel:+4915166093511'>+4915166093511</a>
           <p>piotrsereda90@gmail.com</p>
           <p>{new Date().getFullYear()}&nbsp; Junior | All Rights Reserved</p>
         </MyData>

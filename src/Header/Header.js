@@ -60,7 +60,7 @@ const Header = () => {
     <header id='header'>
       <Wrapper>
         <Info>
-          <H1>web development and promotions</H1>
+          <H1>web design and development</H1>
           <Typed className='type'
             strings={['Web Design','Web Development','Build Amazing Web Apps']}
             typeSpeed={40}

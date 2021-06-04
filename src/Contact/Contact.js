@@ -239,7 +239,7 @@ const Contact = () => {
           </LeftSection>
           <RightSection>
             <textarea type='text'
-            placeholder='Please put your question here'
+            placeholder='Your message'
             name='description'
             {...register('description',{
               required: 'Please describe shortly what you needs...',

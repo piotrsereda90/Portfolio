@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Burger from './Burger';
-import logo from '../assets/logo.jpg';
+import ja from '../assets/ja.jpg';
 
 const Nav = styled.nav`
 display:flex;
@@ -17,8 +17,13 @@ background-color:#353943;
 justify-content:space-between;
 .logo{
   height: 100%;
+  padding: 10px;
   img{
-  height: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 3px;
+    border: 3px solid #FAA90B;
+    background-color: #f1f1f1;
   }
 }
 ul{
@@ -63,7 +68,7 @@ const NavBar = () => {
     <section id='navBar'>
       <Nav>
         <div className='logo'>
-          <img src={logo} alt="logo" />
+          <img src={ja} alt="logo" />
         </div>
         <Burger/>
       </Nav>

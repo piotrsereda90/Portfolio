@@ -22,7 +22,7 @@ h1{
 `
 const Marker = styled.div`
 position:absolute;
-top: 30%;
+top: 22%;
 left:50%;
 transform: translate(-45%, -45%);
 width:15px;
@@ -41,7 +41,7 @@ z-index:2;
  }
 @media(max-width: 768px){
   left:0;
-  top:25%;
+  top:15%;
  }
 `
 const TimeLineWrapperRight = styled.div`
@@ -78,10 +78,13 @@ margin-left: 100px;
 `
 const TimeLineContent = styled.div`
 width:50%;
+padding: 10px 30px;
+p{
+  letter-spacing: 1px;
+}
 @media(max-width: 768px){
   width:100%;
 }
-padding: 10px 30px;
 &:after{
   position:absolute;
   content:'';
@@ -112,21 +115,25 @@ const Experience = () => {
           <Marker/>
           <TimeLineContent>
             <h3>2011-2014</h3>
-            <p>Opis z gali co robiłem.</p>
+            <p>
+              I was the manager of the MMA organization Soul Fighting Championships. Im cooperated with TVN turbo and the MMA-master program, in which the two best players from among many candidates got the chance to fight at the MMA event which I organized. The second event was a much larger undertaking. Live broadcast on orange sport television. 4 thousand people in the stands. Very good young MMA players giving great fights. I gained a lot of experience in working with people, managing a lot of tasks, which together allowed me to achieve the goal.
+            </p>
           </TimeLineContent>
         </TimeLineWrapperRight>
         <TimeLineWrapperLeft>
           <Marker/>
           <TimeLineContent>
             <h3>2015-2019</h3>
-            <p>Opis z nimiec co robilem</p>
+            <p>
+              At the end of my studies I went to work in Germany. I worked in the warehouse with newly arrived employees. I guided them through the entire work process. Starting with the presentation of the job specifications. By introducing employees to the "Pick by voice" system. Ending with control and allowing them to work independently. I got there experience of working with people. I spent a lot of time learning German.
+            </p>
           </TimeLineContent>
         </TimeLineWrapperLeft>
         <TimeLineWrapperRight>
           <Marker/>
           <TimeLineContent>
             <h3>2020-2021</h3>
-            <p>co robilem komercyjnie</p>
+            <p>I worked 10 months at Inspiration Vibes. I have used and developed them my skills as web developer</p>
           </TimeLineContent>
         </TimeLineWrapperRight>
       </Wrapper>
