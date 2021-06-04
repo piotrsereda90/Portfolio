@@ -52,11 +52,11 @@ const style={
 const RightNav = ({open}) => {
   return (
     <Ul open={open}>
-      <li><Link activeClass="active" style={style} smooth={true} to='navBar' offset={-100} href='#'>home</Link></li>
-      <li><Link style={style} smooth={true} to='aboutMe' offset={-100} href='#'>about me</Link></li>
-      <li><Link style={style} smooth={true} to='experience' offset={-100} href='#'>experience</Link></li>
-      <li><Link style={style} smooth={true} to='portfolio' offset={-100} href='#'>portfolio</Link></li>
-      <li><Link style={style} smooth={true} to='contactMe' offset={-90} href='#'>contact</Link></li>
+      <li><Link style={style} smooth={true} to='navBar' offset={-100} href='#'>home</Link></li>
+      <li><Link style={style} smooth={true} to='aboutMe' offset={-110} href='#'>about me</Link></li>
+      <li><Link style={style} smooth={true} to='experience' offset={-120} href='#'>experience</Link></li>
+      <li><Link style={style} smooth={true} to='portfolio' offset={-130} href='#'>portfolio</Link></li>
+      <li><Link style={style} smooth={true} to='contactMe' offset={-110} href='#'>contact</Link></li>
     </Ul>
    );
 }

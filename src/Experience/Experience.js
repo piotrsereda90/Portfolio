@@ -111,31 +111,24 @@ const Experience = () => {
         <TimeLineWrapperRight>
           <Marker/>
           <TimeLineContent>
-            <h3>2015-2016</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet assumenda similique,   odit magni veniam quod dolore ratione laudantium vel recusandae placeat nesciunt pariatur porro eligendi necessitatibus perferendis quidem. Odit.</p>
+            <h3>2011-2014</h3>
+            <p>Opis z gali co robiłem.</p>
           </TimeLineContent>
         </TimeLineWrapperRight>
         <TimeLineWrapperLeft>
           <Marker/>
           <TimeLineContent>
-            <h3>2017-2018</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet assumenda similique, odit magni veniam quod dolore ratione laudantium vel recusandae placeat nesciunt pariatur porro eligendi necessitatibus perferendis quidem. Odit.</p>
+            <h3>2015-2019</h3>
+            <p>Opis z nimiec co robilem</p>
           </TimeLineContent>
         </TimeLineWrapperLeft>
         <TimeLineWrapperRight>
           <Marker/>
           <TimeLineContent>
-            <h3>2019-2020</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet assumenda similique, odit magni veniam quod dolore ratione laudantium vel recusandae placeat nesciunt pariatur porro eligendi necessitatibus perferendis quidem. Odit.</p>
+            <h3>2020-2021</h3>
+            <p>co robilem komercyjnie</p>
           </TimeLineContent>
         </TimeLineWrapperRight>
-        <TimeLineWrapperLeft>
-          <Marker/>
-          <TimeLineContent>
-            <h3>2020-2021</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet assumenda similique, odit magni veniam quod dolore ratione laudantium vel recusandae placeat nesciunt pariatur porro eligendi necessitatibus perferendis quidem. Odit.</p>
-          </TimeLineContent>
-        </TimeLineWrapperLeft>
       </Wrapper>
     </section>
    );

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import {Link} from 'react-scroll';
 
 const Container = styled.div`
 display:flex;
@@ -67,11 +68,11 @@ const Footer = () => {
     <section id='footer'>
       <Container>
         <Nav>
-          <a href="">Home</a>
-          <a href="">About me</a>
-          <a href="">Experience</a>
-          <a href="">Portfolio</a>
-          <a href="">Contacts</a>
+        <Link  smooth={true} to='navBar' offset={-100} href='#'>Home</Link>
+        <Link  smooth={true} to='aboutMe' offset={-100} href='#'>About me</Link>
+        <Link  smooth={true} to='experience' offset={-100} href='#'>Experience</Link>
+        <Link  smooth={true} to='portfolio' offset={-100} href='#'>Portfolio</Link>
+        <Link  smooth={true} to='contactMe' offset={-90} href='#'>Contacts</Link>
         </Nav>
         <MyData>
           <a href="#">+48501229627</a>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {PopupboxManager, PopupboxContainer} from 'react-popupbox';
 import '../../node_modules/react-popupbox/dist/react-popupbox.css';
 import store from '../assets/store.png';
+import certificate from '../assets/certificate.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,7 +13,10 @@ margin-top: 20px;
 `
 const Container = styled.div`
 display:flex;
-flex-direction:column;
+// flex-direction:column;
+flex-direction:row;
+flex-wrap:wrap;
+justify-content: space-around;
 width: 100%;
 `
 const H1 = styled.div`
@@ -82,7 +86,6 @@ img{
   width: 600px;
   height: auto;
   padding: 20px;
-  margin-left: 100px;
   @media(max-width: 823px){
     width:80%;
   }
@@ -91,13 +94,14 @@ img{
     margin-left: 20px;
   }
 }
-p{
-  margin-bottom: 20px;
+div{
+  display:flex;
+  padding-top: 10px;
 }
 a {
-  padding-top: 10px;
   color:#f9ab00;
   cursor:pointer;
+  padding-left: 10px;
   &:hover{
     color:#ef4035;
   }
@@ -109,21 +113,54 @@ const Portfolio = () => {
   const OpenPopupStore = () => {
     const content =(
       <PopupWrapper>
-        <img src={store} alt="Store Giwera Project" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam aliquam provident numquam, odit porro excepturi molestias delectus </p>
-        <b>GitHub:</b> <a href='https://github.com/piotrsereda90/store' target='blank'> https://github.com/piotrsereda90/store</a>
+        <img src={store} alt='Store Project React-Redux' />
+        <div>
+          <b>GitHub:</b> <a href='https://github.com/piotrsereda90/store' target='blank'> https://github.com/piotrsereda90/store</a>
+        </div>
       </PopupWrapper>
     )
     PopupboxManager.open({content})
+    PopupboxManager.update({
+      content,
+      config: {
+        titleBar: {
+          text: 'Store Project React-Redux',
+        },
+      },
+    });
   }
   const popupboxConfigStore = {
     titleBar:{
       enable:true,
-      text: 'Store Project React-Redux',
     },
     fadeIn: true,
     fadeInSpeed: 500,
   }
+
+  const OpenPopupCertificate = () => {
+    const content =(
+      <PopupWrapper>
+        <img src={certificate} alt='Certificate' />
+      </PopupWrapper>
+    )
+    PopupboxManager.open({content})
+    PopupboxManager.update({
+      content,
+      config: {
+        titleBar: {
+          text: 'Certificate School Of React',
+        },
+      },
+    });
+  }
+  const popupboxConfigCertificate = {
+    titleBar:{
+      enable:true,
+    },
+    fadeIn: true,
+    fadeInSpeed: 500,
+  }
+
   return (
     <section id='portfolio'>
       <Wrapper>
@@ -137,9 +174,16 @@ const Portfolio = () => {
               <img src={store} alt="store" />
             </ImgContainer>
           </ImgWrapper>
+          <ImgWrapper>
+            <ImgContainer onClick={OpenPopupCertificate}>
+              <FontSearch><FontAwesomeIcon icon={faSearchPlus}/></FontSearch>
+              <img src={certificate} alt='certificate' />
+            </ImgContainer>
+          </ImgWrapper>
         </Container>
       </Wrapper>
       <PopupboxContainer {...popupboxConfigStore}/>
+      <PopupboxContainer {...popupboxConfigCertificate}/>
     </section>
    );
 }
