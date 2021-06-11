@@ -8,14 +8,20 @@ display:flex;
 flex-direction:row;
 background-color: #000;
 padding-left: 100px;
-padding-right: 700px;
+padding-right: 100px;
 padding-top: 50px;
 padding-bottom: 50px;
 color: #aaa;
+div~div{
+padding-left: 100px;
+}
 @media(max-width: 823px){
   flex-direction:column;
   padding-right: 0px;
   padding-left: 0px;
+  div~div{
+    padding-left: 0px;
+    }
 }
 `
 const MyData = styled.div`
@@ -29,14 +35,16 @@ a{
   display:block;
   width: 100%;
   text-decoration:none;
-  padding: 5px 30px;
+  padding: 5px 0;
   color: #aaa;
   @media(max-width: 823px){
     padding: 10px 30px;
   }
 }
 p{
-  padding: 5px 30px;
+  padding-left: 30;
+  padding-top: 5px;
+  padding-bottom: 5px;
   width: 100%;
   @media(max-width: 823px){
     padding: 10px 30px;
@@ -65,13 +73,16 @@ a{
 const Quote = styled.div`
 p{
   letter-spacing: 1px;
+  line-height: 30px;
 }
 p~p{
   text-align:right;
 }
 @media(max-width: 823px){
   text-align:center;
-  padding: 10px 60px;
+  p~p{
+    padding-right: 40px;
+  }
 }
 `
 
