@@ -62,6 +62,18 @@ a{
   }
 }
 `
+const Quote = styled.div`
+p{
+  letter-spacing: 1px;
+}
+p~p{
+  text-align:right;
+}
+@media(max-width: 823px){
+  text-align:center;
+  padding: 10px 60px;
+}
+`
 
 const Footer = () => {
   return (
@@ -80,6 +92,10 @@ const Footer = () => {
           <p>piotrsereda90@gmail.com</p>
           <p>{new Date().getFullYear()}&nbsp; Junior | All Rights Reserved</p>
         </MyData>
+        <Quote><p>“Don't fear failure. — Not failure, but low aim, is the crime. In great attempts it is glorious even to fail.”</p>
+        <br />
+          <p>Bruce Lee</p>
+        </Quote>
       </Container>
     </section>
    );
