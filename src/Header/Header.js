@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Typed from 'react-typed';
 import background from '../assets/background.jpg';
+import{Link} from 'react-scroll';
 
 
 const Wrapper = styled.div`
@@ -23,6 +24,7 @@ const Info = styled.div`
   left:50%;
   transform: translate(-50%, -50%);
   align-items:center;
+  z-index:2;
   .type{
     margin-top: 40px;
     font-size: 30px;
@@ -53,14 +55,12 @@ const H1 = styled.h1`
   font-weight: bold;
 `
 
-
-
 const Header = () => {
   return (
-    <header>
+    <header id='header'>
       <Wrapper>
         <Info>
-          <H1>web development and promotions</H1>
+          <H1>web design and development</H1>
           <Typed className='type'
             strings={['Web Design','Web Development','Build Amazing Web Apps']}
             typeSpeed={40}
@@ -68,7 +68,7 @@ const Header = () => {
             loop
             >
           </Typed>
-          <a href="">contact me</a>
+          <Link  to='contactMe' smooth={true} offset={-90}  href='#'>contact me</Link>
         </Info>
       </Wrapper>
     </header>

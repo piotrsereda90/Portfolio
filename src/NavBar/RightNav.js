@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import {Link} from 'react-scroll';
 
 const Ul = styled.ul`
 ul{
@@ -39,21 +40,23 @@ ul{
   transform: ${({open}) => open? 'translateX(0)': 'translateX(100%)'};
   li{
     padding: 20px 0;
-    border-top: 2px solid #353943;
   }
 }
-`;
+`
+const style={
+  textDecoration:'none',
+  color:'#f4f4f4',
+}
 
 
 const RightNav = ({open}) => {
   return (
     <Ul open={open}>
-      <li>home</li>
-      <li>about me</li>
-      <li>services</li>
-      <li>how work</li>
-      <li>portfolio</li>
-      <li>contact</li>
+      <li><Link style={style} smooth={true} to='navBar' offset={-100} href='#'>home</Link></li>
+      <li><Link style={style} smooth={true} to='aboutMe' offset={-110} href='#'>about me</Link></li>
+      <li><Link style={style} smooth={true} to='experience' offset={-120} href='#'>experience</Link></li>
+      <li><Link style={style} smooth={true} to='portfolio' offset={-130} href='#'>portfolio</Link></li>
+      <li><Link style={style} smooth={true} to='contactMe' offset={-110} href='#'>contact</Link></li>
     </Ul>
    );
 }

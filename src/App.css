@@ -25,3 +25,38 @@ body {
     display: none;
   }
 }
+
+
+:root {
+  --primary-white: #f1f1f1;
+  --primary-light-grey: #f4f4f4;
+  --primary-yellow: #f9ab00;
+  --primary-dark: rgba(255, 255, 255, 0);
+  --primary-orange: #ef4035;
+  --primary-hover-orange: #f33501;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #555;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #353943;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media(max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}

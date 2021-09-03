@@ -2,14 +2,14 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Burger from './Burger';
-import logo from '../assets/logo.jpg';
+import ja from '../assets/ja.jpg';
 
 const Nav = styled.nav`
 display:flex;
-position:absolute;
+position:fixed;
 top:0;
 width:0;
-z-index:2;
+z-index:4;
 width: 100%;
 height: 15vh;
 padding-left:150px;
@@ -17,8 +17,13 @@ background-color:#353943;
 justify-content:space-between;
 .logo{
   height: 100%;
+  padding: 10px;
   img{
-  height: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 3px;
+    border: 3px solid #FAA90B;
+    background-color: #f1f1f1;
   }
 }
 ul{
@@ -33,11 +38,18 @@ ul{
 li{
   color:#9C9FA5;
   font-size: 21px;
+  padding-top:5px;
   border-top: 2px solid #353943;
   text-transform:uppercase;
+  transition: .3s;
   :hover{
     cursor:pointer;
-    border-top: 2px solid yellow;
+    border-top: 2px solid #FAA90B;
+  }
+  a:focus{
+    padding-top:5px;
+    border-top: 2px solid #FAA90B;;
+  }
   }
 }
 @media (max-width: 1240px){
@@ -53,12 +65,14 @@ li{
 const NavBar = () => {
 
   return (
-    <Nav>
-      <div className='logo'>
-        <img src={logo} alt="logo" />
-      </div>
-      <Burger/>
-    </Nav>
+    <section id='navBar'>
+      <Nav>
+        <div className='logo'>
+          <img src={ja} alt="logo" />
+        </div>
+        <Burger/>
+      </Nav>
+    </section>
    );
 }
 export default NavBar;

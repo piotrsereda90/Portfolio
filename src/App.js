@@ -3,6 +3,10 @@ import Particles from 'react-particles-js';
 import NavBar from './NavBar';
 import Header from './Header';
 import AboutMe from './AboutMe';
+import Experience from './Experience';
+import Portfolio from './Portfolio';
+import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
       <NavBar/>
       <Header/>
       <AboutMe/>
+      <Experience/>
+      <Portfolio/>
+      <Contact/>
+      <Footer/>
     </>
   );
 }
